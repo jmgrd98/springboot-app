@@ -1,18 +1,25 @@
-package com.example.demo.student;
+package com.example.demo.student.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
-public class Student {
+
+@Entity
+@Table
+public class StudentModel {
+    @Id
     private Long id;
     private String name;
     private String email;
     private Integer age;
     private LocalDate dob;
 
-    public Student() {
+    public StudentModel() {
     }
 
-    public Student(Long id, String name, String email, Integer age, LocalDate dob) {
+    public StudentModel(Long id, String name, String email, Integer age, LocalDate dob) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -20,7 +27,7 @@ public class Student {
         this.dob = dob;
     }
 
-    public Student(String name, String email, Integer age, LocalDate dob) {
+    public StudentModel(String name, String email, Integer age, LocalDate dob) {
         this.name = name;
         this.email = email;
         this.age = age;
@@ -77,4 +84,5 @@ public class Student {
                 ", dob=" + dob +
                 '}';
     }
+
 }

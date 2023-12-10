@@ -1,18 +1,19 @@
 package com.example.demo.student;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+import com.example.demo.student.models.StudentModel;
+
 @Service
 public class StudentService {
 
-    public List<Student> getStudents() {
+    public List<StudentModel> getStudents() {
         return List.of(
-                new Student(
+                new StudentModel(
                         1L,
                         "Maria",
                         "maria@gmail.com",
